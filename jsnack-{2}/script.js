@@ -25,7 +25,17 @@ const compareNumbers = (a, b) => a.peso - b.peso;
 // bici.sort(function(a, b) {
 //     return a.peso - b.peso;
 // })
-
 console.log(bici.sort(compareNumbers))
 
-$('.bici-leggera').append(`La bici più leggera è la ${bici[0].marca} con il peso di ${bici[0].peso}`)
+const [{ marca }] = bici;
+const [{ peso }] = bici;
+
+
+$('.bici-leggera').append(
+    `
+    La bici più leggera è la ${marca} con il peso di ${peso}
+    `
+)
+
+
+// $('.bici-leggera').append(`La bici più leggera è la ${bici[0].marca} con il peso di ${bici[0].peso}`)
